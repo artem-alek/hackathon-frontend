@@ -1,4 +1,4 @@
-function UserController ($scope, $http, SERVER, $state, $cookies) {
+function UserController ($scope, $http, SERVER, $state, $cookies,  $rootScope) {
 
     $scope.signUp = (user) => {
         $http.post(`${SERVER}/users`, user).then(resp => {
@@ -26,6 +26,6 @@ function UserController ($scope, $http, SERVER, $state, $cookies) {
 
 }
 
-UserController.$inject = ['$scope', '$http', 'SERVER', '$state', '$cookies'];
+UserController.$inject = ['$scope', '$http', 'SERVER', '$state', '$cookies', ' $rootScope'];
 
 export default UserController;
