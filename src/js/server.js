@@ -1,0 +1,1 @@
+export default 'https://dry-river-11900.herokuapp.com';

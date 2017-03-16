@@ -1,0 +1,54 @@
+<!--<div ng-repeat="msg in notifications"-->
+     <!--class="notification is-primary">-->
+    <!--<button ng-click="removeMsg(msg)"-->
+            <!--class="delete"></button>-->
+    <!--<p class="content">-->
+        <!--{{ msg }}-->
+    <!--</p>-->
+<!--</div>-->
+
+<div class="columns">
+    <div class="column"></div>
+    <div class="column">
+        <h4>Sign Up</h4>
+
+        <form ng-submit="signUp(user)">
+
+            <p class="control">
+                <input type="text" placeholder="Username"
+                       ng-model="user.username" />
+            </p>
+            <p class="control">
+                <input type="text" placeholder="Email"
+                       ng-model="user.email" />
+            </p>
+            <p class="control">
+                <input type="password" placeholder="Password"
+                       ng-model="user.password" />
+            </p>
+            <p class="control">
+                <button class="button is-primary">Sign Up</button>
+            </p>
+        </form>
+    </div>
+    <div class="column">
+        <h4>Sign In</h4>
+
+        <form ng-submit="signIn(login)">
+
+            <p class="control">
+                <input type="text" placeholder="Email"
+                       ng-model="login.email" />
+            </p>
+            <p class="control">
+                <input type="password" placeholder="Password"
+                       ng-model="login.password" />
+            </p>
+
+            <p class="control">
+                <button class="button is-primary">Sign In</button>
+            </p>
+        </form>
+    </div>
+    <div class="column"></div>
+</div>

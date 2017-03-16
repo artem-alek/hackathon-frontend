@@ -1,0 +1,25 @@
+<nav>
+    <div class="columns">
+
+        <div class="column">
+        <img src="../images/Logomakr_2bKchf.png" alt="" class="logo-image">
+        </div>
+    </div>
+    <div class="nav-center nav-menu">
+        <a class="nav-item" href="#!/home">
+            Home
+        </a>
+        <a class="nav-item" href="#!/photo/new" ng-show="loggedIn">
+            Add Photo
+        </a>
+        <a class="nav-item" href="#!/sign-up" ng-hide="loggedIn">
+            Sign Up / Sign In
+        </a>
+        <a class="nav-item" ng-show="loggedIn" ng-click="signOut()">
+            Sign Out
+        </a>
+    </div>
+</nav>
+
+<div class="content" ui-view>
+</div>
