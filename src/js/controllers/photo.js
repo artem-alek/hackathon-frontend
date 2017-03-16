@@ -1,4 +1,4 @@
-function PhotoController ($scope, $http, SERVER){
+function PhotoController ($scope, $http, SERVER) {
 
 }
 

@@ -6,11 +6,13 @@ import SERVER from './server';
 
 import UserController from './controllers/user';
 import PhotoController from './controllers/photo';
+import LayoutController from './controllers/layout';
 
 angular
     .module('app', ['ui.router'])
     .config(AppConfig)
     .constant('SERVER', SERVER)
     .controller('UserController', UserController)
+    .controller('LayoutController', LayoutController)
     .controller('PhotoController', PhotoController);
 
