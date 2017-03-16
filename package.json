@@ -40,6 +40,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
     "bulma": "^0.4.0"
   }
 }
