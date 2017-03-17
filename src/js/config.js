@@ -19,16 +19,12 @@ function Config ($stateProvider, $urlRouterProvider) {
         .state('root.user', {
             url: '/user',
             templateUrl: 'templates/user-page.tpl.html',
-        });
-          url: '/home',
-          templateUrl: 'templates/photo-list.tpl.html',
-          controller: 'PhotoController'
         })
         .state('root.addphoto', {
           url: '/photo/add',
           controller: 'PhotoController',
           templateUrl: 'templates/add-photo.tpl.html'
-        })
+        });
 
 
   $urlRouterProvider.when('', '/home');
