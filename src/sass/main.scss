@@ -7,11 +7,15 @@
 }
 
 .logo-image {
-  width:150px;
+  width: 150px;
   margin-top: 15px;
   margin-left: 43%;
 }
 
 .main-content {
   text-align: center;
+}
+
+img {
+  object-fit: cover;
 }
