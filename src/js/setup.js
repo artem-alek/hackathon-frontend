@@ -1,11 +1,11 @@
 function setup ($rootScope, $cookies, $http) {
 
-    let token = $cookies.get('access-token');
+  let token = $cookies.get('access-token');
 
-    if (token) {
-        $rootScope.loggedIn = true;
-        $http.defaults.headers.common['access-token'] = token;
-    }
+  if (token) {
+    $rootScope.loggedIn = true;
+    $http.defaults.headers.common['access-token'] = token;
+  }
 
 }
 
