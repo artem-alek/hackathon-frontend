@@ -12,7 +12,7 @@ function UserController ($scope, $http, SERVER, $state, $cookies, $rootScope) {
   };
 
   $scope.signIn = (user) => {
-    // console.log('from inside signin');
+    //console.log('from inside signin');
     // console.log(user);
     $http.post(`${SERVER}/login`, user).then(resp => {
       // console.log(user)

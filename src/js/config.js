@@ -15,7 +15,12 @@ function Config ($stateProvider, $urlRouterProvider) {
           url: '/home',
           templateUrl: 'templates/photo-list.tpl.html',
           controller: 'PhotoController'
-        });
+        })
+        .state('root.addphoto', {
+          url: '/photo/add',
+          controller: 'PhotoController',
+          templateUrl: 'templates/add-photo.tpl.html'
+        })
 
   $urlRouterProvider.when('', '/home');
   $urlRouterProvider.otherwise('/not-found');
