@@ -15,6 +15,11 @@ function Config ($stateProvider, $urlRouterProvider) {
             url: '/home',
             templateUrl: 'templates/photo-list.tpl.html',
             controller: 'PhotoController'
+        })
+        .state('root.user', {
+            url: '/user',
+            templateUrl: 'templates/user-page.tpl.html',
+            // controller: 'PhotoController'
         });
 
     $urlRouterProvider.when('', '/home');
