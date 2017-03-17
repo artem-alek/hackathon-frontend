@@ -19,7 +19,6 @@ function Config ($stateProvider, $urlRouterProvider) {
         .state('root.user', {
             url: '/user',
             templateUrl: 'templates/user-page.tpl.html',
-            // controller: 'PhotoController'
         });
 
     $urlRouterProvider.when('', '/home');
