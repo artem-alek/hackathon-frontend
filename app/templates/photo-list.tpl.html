@@ -1,5 +1,23 @@
-<div class="columns">
-    <div class="column main-content">
-        <h1>Home Page</h1>
+<div class="columns is-multiline">
+  <div class="column is-one-quarter" ng-repeat="photo in photos">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1">
+          <img ng-src="{{ photo.photo_url }}" alt="Image">
+        </figure>
+      </div>
+      <!--<div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Place Holder</p>
+          </div>
+        </div>
+      </div>-->
     </div>
+  </div>
 </div>

@@ -1,0 +1,20 @@
+<div class="columns">
+    <div class="column"></div>
+    <div class="column">
+      <h4>Add Photo</h4>
+      <form ng-submit="addPhoto(user)">
+        <p class="control">
+            <input type="text" placeholder="http://ficmeasdf"
+                   ng-model="user.photo_url" />
+        </p>
+        <p class="control">
+            <input type="text" placeholder="Photo Description"
+                   ng-model="user.description" />
+        </p>
+        <p class="control">
+            <button class="button is-primary">Add It!</button>
+        </p>
+      </form>
+    </div>
+    <div class="column"></div>
+  </div>
