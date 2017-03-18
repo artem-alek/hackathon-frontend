@@ -12,9 +12,13 @@ function Config ($stateProvider, $urlRouterProvider) {
           templateUrl: 'templates/sign-up.tpl.html'
         })
         .state('root.home', {
-          url: '/home',
-          templateUrl: 'templates/photo-list.tpl.html',
-          controller: 'PhotoController'
+            url: '/home',
+            templateUrl: 'templates/photo-list.tpl.html',
+            controller: 'PhotoController'
+        })
+        .state('root.user', {
+            url: '/user',
+            templateUrl: 'templates/user-page.tpl.html',
         })
         .state('root.addphoto', {
           url: '/photo/add',
@@ -26,6 +30,7 @@ function Config ($stateProvider, $urlRouterProvider) {
           controller: 'PhotoSingleController',
           templateUrl: 'templates/photo-single.tpl.html'
         });
+
 
   $urlRouterProvider.when('', '/home');
   $urlRouterProvider.otherwise('/not-found');
