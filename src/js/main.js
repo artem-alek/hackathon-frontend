@@ -10,6 +10,8 @@ import UserController from './controllers/user';
 import PhotoController from './controllers/photo';
 import LayoutController from './controllers/layout';
 import PhotoSingleController from './controllers/photo-single'
+import UserPageController from './controllers/user-page'
+
 
 angular
     .module('app', ['ui.router', 'ngCookies'])
@@ -20,3 +22,4 @@ angular
     .controller('LayoutController', LayoutController)
     .controller('PhotoController', PhotoController)
     .controller('PhotoSingleController', PhotoSingleController);
+    .controller('UserPageController', UserPageController);
