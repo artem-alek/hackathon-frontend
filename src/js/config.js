@@ -21,6 +21,11 @@ function Config ($stateProvider, $urlRouterProvider) {
           controller: 'PhotoController',
           templateUrl: 'templates/add-photo.tpl.html'
         })
+        .state('root.photo', {
+          url: '/photo/:photoid',
+          controller: 'PhotoSingleController',
+          templateUrl: 'templates/photo-single.tpl.html'
+        });
 
   $urlRouterProvider.when('', '/home');
   $urlRouterProvider.otherwise('/not-found');
