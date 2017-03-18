@@ -1,29 +1,43 @@
 <div class="user-containter">
 
 <div class= "userphoto-container">
-  <img class="user-photo" src="https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg">
-
-  <p>Placeholder</p>
-  <p>Placeholder</p>
-</div>
-
-
+  <img class="user-photo" src="{{user.profilephoto}}">
 
 </div>
 
-<style>
-.userphoto-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+<div class ="profile">
+  <a class="button is-primary">Add a profile image</a>
+</div>
+  <div class =" addprofile">
+  <div class="columns">
+      <div class="column"></div>
+      <div class="column">
+        <h4>Add Photo</h4>
+        <form ng-submit="addProfilepic(profile)">
+          <p class="control">
+              <input type="text" placeholder="http://awesomephoto"
+                     ng-model="profile.profilephoto" />
+          </p>
 
-}
+          <p class="control">
+              <button class="button is-primary">Add It!</button>
+          </p>
+        </form>
+      </div>
+      <div class="column"></div>
+    </div>
+  </div>
+<div class = "userinfo">
+<p>{{user.username}}</p>
+</div>
+<div class="columns is-multiline">
+  <div class="column is-one-quarter" ng-repeat="photo in photos">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1">
+          <img ng-src="{{ photo.photo_url }}" alt="Image">
+        </figure>
+      </div>
+    </div>
 
-.user-photo{
-  height: 376px;
-  width: 387px;
-  align-self: center;
-}
-
-
-</style>
+</div>

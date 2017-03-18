@@ -17,8 +17,9 @@ function Config ($stateProvider, $urlRouterProvider) {
             controller: 'PhotoController'
         })
         .state('root.user', {
-            url: '/user',
+            url: '/user/:userid',
             templateUrl: 'templates/user-page.tpl.html',
+            controller: 'UserPageController'
         })
         .state('root.addphoto', {
           url: '/photo/add',
