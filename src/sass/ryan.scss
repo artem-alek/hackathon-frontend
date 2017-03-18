@@ -1,0 +1,48 @@
+@import "bulma";
+
+
+.userphoto-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-photo{
+  height: 270px;
+   width: 270px;
+  align-self: center;
+
+  img{
+    height: 270px;
+    width: 270px;
+  }
+}
+
+.userinfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 50px;
+
+  p{
+    align-self: center;
+    font-size: 40px;
+  }
+}
+
+.profile{
+
+  margin-left: 382px;
+}
+
+.addprofile {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .columns{
+    align-items: center;
+  }
+}
