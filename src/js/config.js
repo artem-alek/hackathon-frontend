@@ -25,6 +25,11 @@ function Config ($stateProvider, $urlRouterProvider) {
           url: '/photo/add',
           controller: 'PhotoController',
           templateUrl: 'templates/add-photo.tpl.html'
+        })
+        .state('root.photo', {
+          url: '/photo/:photoid',
+          controller: 'PhotoSingleController',
+          templateUrl: 'templates/photo-single.tpl.html'
         });
 
 

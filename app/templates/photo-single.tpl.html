@@ -1,0 +1,28 @@
+<div class="columns">
+  <div class="column">
+
+    <figure class="image is-1by1">
+      <img ng-src="{{ photo.photo_url }}" alt="Image" class="photo">
+    </figure>
+
+    <p class="title is-1">{{ photo.username }}</p>
+
+
+    <div class="comments">
+      <p class="comment-title title is-3">Comments</p>
+      <form ng-submit="addComment(comment)">
+        <div class="field">
+          <button>Add Comment</button>
+          <p class="control">
+            <input class="input" type="text" placeholder="Your Comment"
+            ng-model="comment.comment">
+          </p>
+          </div>
+      </form>
+      <p class="comment" ng-repeat="comment in comments">
+         {{ comment }}
+      </p>
+    </div>
+
+  </div>
+</div>
