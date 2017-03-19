@@ -12,14 +12,14 @@ function Config ($stateProvider, $urlRouterProvider) {
           templateUrl: 'templates/sign-up.tpl.html'
         })
         .state('root.home', {
-            url: '/home',
-            templateUrl: 'templates/photo-list.tpl.html',
-            controller: 'PhotoController'
+          url: '/home',
+          templateUrl: 'templates/photo-list.tpl.html',
+          controller: 'PhotoController'
         })
         .state('root.user', {
-            url: '/user/:userid',
-            templateUrl: 'templates/user-page.tpl.html',
-            controller: 'UserPageController'
+          url: '/user/:userid',
+          templateUrl: 'templates/user-page.tpl.html',
+          controller: 'UserPageController'
         })
         .state('root.addphoto', {
           url: '/photo/add',
