@@ -9,6 +9,8 @@ function init () {
     $scope.user = resp.data;
     $scope.photos = resp.data.photos;
     console.log($scope.photos);
+    console.log(resp.data.id);
+    console.log(resp.user);
 
   });
 };
