@@ -1,14 +1,21 @@
-<div class="user-containter">
+
+
+
+<div ng-app="ngAnimate" class="user-containter">
 
 <div class= "userphoto-container">
   <img class="user-photo" src="{{user.profilephoto}}">
 
 </div>
 
+
+
+
+
 <div class ="profile">
-  <a class="button is-primary">Add a profile image</a>
+  <a class="button is-primary" ng-click="toggle()" aria-label"Toggle ngHide">Add a profile image</a>
 </div>
-  <div class =" addprofile">
+  <div class =" addprofile" ng-show="myVar">
   <div class="columns">
       <div class="column"></div>
       <div class="column">
@@ -30,14 +37,16 @@
 <div class = "userinfo">
 <p>{{user.username}}</p>
 </div>
-<div class="columns is-multiline">
+<div class="columns is-gapless is-multiline is-mobile">
   <div class="column is-one-quarter" ng-repeat="photo in photos">
     <div class="card">
       <div class="card-image">
         <figure class="image is-1by1">
-          <img ng-src="{{ photo.photo_url }}" alt="Image">
+          <img class="user-images" ng-src="{{ photo.photo_url }}" alt="Image">
         </figure>
       </div>
     </div>
 
+</div>
+</div>
 </div>
