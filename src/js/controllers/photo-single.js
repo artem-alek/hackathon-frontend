@@ -9,6 +9,10 @@ function PhotoSingleController ($scope, $http, SERVER, $state) {
       $scope.user = resp.data.user;
 
       $scope.comments = resp.data.comments;
+      console.log(resp.data.comments, 'array of comments');
+    })
+    .catch(error => {
+      console.log(error);
     });
   }
 
@@ -19,6 +23,7 @@ function PhotoSingleController ($scope, $http, SERVER, $state) {
     $http.post(`${SERVER}/comments/${$state.params.photoid}`, comment).then(resp => {
       console.log(resp, comment);
     })
+    .then($state.reload())
     .catch(error => {
       console.log(error);
     });
