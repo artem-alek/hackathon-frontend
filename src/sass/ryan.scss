@@ -1,6 +1,11 @@
 @import "bulma";
 
 
+
+.userphoto-container{
+  // background-color: #262626;
+}
+
 .userphoto-container{
   display: flex;
   align-items: center;
@@ -8,9 +13,11 @@
 }
 
 .user-photo{
-  height: 270px;
-   width: 270px;
+  height: 470px;
+   width: 470px;
   align-self: center;
+  border-radius: 50%;
+
 
   img{
     height: 270px;
@@ -31,12 +38,36 @@
   }
 }
 
-.profile{
 
-  margin-left: 440px;
+.ng-show {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
 }
 
+
+
+.profile{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+a{
+  align-items: center;
+  
+}
+}
+
+
+.addprofile.ng-show {
+    opacity: 0;
+}
 .addprofile {
+  transition: all linear 500ms;
+    opacity: 1;
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -45,4 +76,17 @@
   .columns{
     align-items: center;
   }
+}
+
+.columns is-gapless is-multiline is-mobile{
+}
+
+.card-image{
+  // height: 350px;
+  // width: 350px;
+}
+
+img.user-images{
+  height: 350px;
+  width: 350px;
 }

@@ -27,6 +27,10 @@ $scope.addProfilepic = (info) => {
   });
 };
 
+$scope.toggle = function() {
+       $scope.myVar = !$scope.myVar;
+   };
+
 };
 
 
