@@ -4,6 +4,7 @@ function PhotoController ($scope, $http, SERVER, $state) {
   function init () {
     $http.get(`${SERVER}/photos`).then(resp => {
       $scope.photos = resp.data;
+      console.log($scope.photos);
     });
   }
 

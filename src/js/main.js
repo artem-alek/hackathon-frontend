@@ -21,5 +21,5 @@ angular
     .controller('UserController', UserController)
     .controller('LayoutController', LayoutController)
     .controller('PhotoController', PhotoController)
-    .controller('PhotoSingleController', PhotoSingleController);
+    .controller('PhotoSingleController', PhotoSingleController)
     .controller('UserPageController', UserPageController);
