@@ -1,4 +1,4 @@
-function UserPageController ($scope, $http, SERVER, $state) {
+function UserPageController ($cookies, $scope, $http, SERVER, $state) {
 
 $scope.photos = []
 
@@ -18,6 +18,7 @@ init();
 
 
 $scope.addProfilepic = (info) => {
+
   $http.put(`${SERVER}/update/${$state.params.userid}`, info).then( resp => {
     console.log(resp.data);
   })
@@ -27,14 +28,22 @@ $scope.addProfilepic = (info) => {
   });
 };
 
+
 $scope.toggle = function() {
-       $scope.myVar = !$scope.myVar;
-   };
+
+  console.log($state.params.userid);
+if ($cookies.get('user-id') === $state.params.userid) {
+console.log($cookies.get('user-id'));
+      $scope.myVar = !$scope.myVar;
+  };
+
+
+}
 
 };
 
 
 
-UserPageController.$inject = ['$scope', '$http', 'SERVER', '$state'];
+UserPageController.$inject = ['$cookies','$scope', '$http', 'SERVER', '$state'];
 
 export default UserPageController;

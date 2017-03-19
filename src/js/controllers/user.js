@@ -18,6 +18,7 @@ function UserController ($scope, $http, SERVER, $state, $cookies, $rootScope) {
       // console.log(user)
       $rootScope.loggedIn = true;
       $cookies.put('access-token', resp.data.token);
+      $cookies.put('user-id', resp.data.user.id)
       $http.defaults.headers.common['access-token'] = resp.data.token;
       $state.go('root.home');
     }).catch(error => {
