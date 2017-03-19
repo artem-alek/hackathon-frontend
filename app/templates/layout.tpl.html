@@ -1,24 +1,38 @@
-<nav>
-    <div class="columns">
-
-        <div class="column">
-        <img src="../images/Logomakr_2bKchf.png" alt="" class="logo-image">
-        </div>
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        FOTO
+        <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
+      </a>
+      <a class="nav-item is-tab is-hidden-mobile is-active" href="#!/home">Gallery</a>
+      <!-- <a class="nav-item is-tab is-hidden-mobile" href="#!/about">About</a> -->
     </div>
-    <div class="nav-center nav-menu">
-        <a class="nav-item" href="#!/home">
-            Home
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+      <a class="nav-item is-tab is-hidden-tablet is-active" href="#!/home">Gallery</a>
+      <!-- <a class="nav-item is-tab is-hidden-tablet" href="#!/about">About</a> -->
+      <a class="nav-item is-tab" href="#!/user/{{ user[0] }}" ng-show="loggedIn">
+        <figure class="image is-16x16" style="margin-right: 8px;">
+          <img src="http://bulma.io/images/jgthms.png">
+        </figure>
+        Profile
+      </a>
+      <a class="nav-item is-tab" href="#!/photo/add" ng-show="loggedIn">
+        Add Photo
+      </a>
+      <a class="nav-item is-tab" href="#!/sign-up" ng-hide="loggedIn">
+          Sign Up / Sign In
         </a>
-        <a class="nav-item" href="#!/photo/add" ng-show="loggedIn">
-            Add Photo
-        </a>
-        <a class="nav-item" href="#!/sign-up" ng-hide="loggedIn">
-            Sign Up / Sign In
-        </a>
-        <a class="nav-item" ng-show="loggedIn" ng-click="signOut()">
-            Sign Out
+        <a class="nav-item is-tab" ng-show="loggedIn" ng-click="signOut()">
+          Sign Out
         </a>
     </div>
+  </div>
 </nav>
 
 <div class="content" ui-view>
