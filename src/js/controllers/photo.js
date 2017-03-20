@@ -14,7 +14,7 @@ function PhotoController ($scope, $http, SERVER, $state) {
     $http.post(`${SERVER}/photos`, info).then(resp => {
       console.log(resp.data);
     })
-      .then($state.go('/home'))
+      .then($state.go('root.home'))
       .catch(error => {
         console.log(error);
       });
