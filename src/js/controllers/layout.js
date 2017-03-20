@@ -5,6 +5,7 @@ function LayoutController ($scope, $rootScope, $cookies, $state, $http) {
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
     $cookies.remove('access-token');
+    $cookies.remove('user-id');
     $http.defaults.headers.common['access-token'] = null;
     $state.go('root.home');
   };
