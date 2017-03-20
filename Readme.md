@@ -21,4 +21,4 @@ Users also have their own user page which displays all of their work. If you see
 
 Signing up for our site is easy. Just click on the sign up/ sign in button at the top of the page and fill out the information.
 
-[Live Site]()
+[Live Site](http://tiy-houseofkal-el-hackathon-frontend.surge.sh)

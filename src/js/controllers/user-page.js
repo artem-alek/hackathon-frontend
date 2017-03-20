@@ -1,7 +1,8 @@
 function UserPageController ($cookies, $scope, $http, SERVER, $state, $stateParams) {
 
   $scope.photos = [];
-  $scope.addPhotoForm = false;
+  $scope.myVar  = false; 
+
 
   function init () {
 
@@ -27,8 +28,9 @@ function UserPageController ($cookies, $scope, $http, SERVER, $state, $statePara
 
 
   $scope.toggle = function() {
+    console.log($cookies.get('user-id') === $stateParams.userid);
     if ($cookies.get('user-id') === $stateParams.userid) {
-      $scope.addPhotoForm = !$scope.addPhotoForm;
+      $scope.myVar = true;
     }
   };
 
