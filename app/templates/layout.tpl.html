@@ -16,7 +16,7 @@
     <div class="nav-right nav-menu">
       <a class="nav-item is-tab is-hidden-tablet is-active" href="#!/home">Gallery</a>
       <!-- <a class="nav-item is-tab is-hidden-tablet" href="#!/about">About</a> -->
-      <a class="nav-item is-tab" href="#!/user/{{ user[0] }}" ng-show="loggedIn">
+      <a class="nav-item is-tab" ng-show="loggedIn" ng-click="goProfile()">
         <figure class="image is-16x16" style="margin-right: 8px;">
           <img src="http://bulma.io/images/jgthms.png">
         </figure>

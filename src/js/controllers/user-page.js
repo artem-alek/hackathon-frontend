@@ -1,49 +1,41 @@
-function UserPageController ($cookies, $scope, $http, SERVER, $state) {
+function UserPageController ($cookies, $scope, $http, SERVER, $state, $stateParams) {
 
-$scope.photos = []
+  $scope.photos = [];
+  $scope.addPhotoForm = false;
 
-function init () {
+  function init () {
 
-  $http.get(`${SERVER}/user/${$state.params.userid}/photos`).then(resp => {
-    console.log(resp.data);
-    $scope.user = resp.data;
-    $scope.photos = resp.data.photos;
-    console.log($scope.photos);
+    $http.get(`${SERVER}/user/${$stateParams.userid}/photos`).then(resp => {
+      $scope.user = resp.data;
+      $scope.photos = resp.data.photos;
 
-  });
-};
+    });
+  }
 
-init();
-
+  init();
 
 
-$scope.addProfilepic = (info) => {
 
-  $http.put(`${SERVER}/update/${$state.params.userid}`, info).then( resp => {
-    console.log(resp.data);
-  })
-  .then( $state.reload())
-  .catch(error => {
-    console.log(error);
-  });
-};
+  $scope.addProfilepic = (info) => {
 
-
-$scope.toggle = function() {
-
-  console.log($state.params.userid);
-if ($cookies.get('user-id') === $state.params.userid) {
-console.log($cookies.get('user-id'));
-      $scope.myVar = !$scope.myVar;
+    $http.put(`${SERVER}/update/${$stateParams.userid}`, info)
+    .then( $state.reload())
+    .catch(error => {
+      console.log(error);
+    });
   };
 
 
+  $scope.toggle = function() {
+    if ($cookies.get('user-id') === $stateParams.userid) {
+      $scope.addPhotoForm = !$scope.addPhotoForm;
+    }
+  };
+
 }
 
-};
 
 
-
-UserPageController.$inject = ['$cookies','$scope', '$http', 'SERVER', '$state'];
+UserPageController.$inject = ['$cookies','$scope', '$http', 'SERVER', '$state', '$stateParams'];
 
 export default UserPageController;

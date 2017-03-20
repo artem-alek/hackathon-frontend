@@ -1,7 +1,5 @@
 function LayoutController ($scope, $rootScope, $cookies, $state, $http) {
 
-  $scope.user = [];
-
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
     $cookies.remove('access-token');
@@ -10,13 +8,11 @@ function LayoutController ($scope, $rootScope, $cookies, $state, $http) {
     $state.go('root.home');
   };
 
-  function init () {
-    let userid = $cookies.get('user-id');
-    $scope.user.push(userid);
-
+  $scope.goProfile = () => {
+    let userId = $cookies.get('user-id');
+    $state.go('root.user', { userid: userId });
   }
 
-  init();
 }
 
 LayoutController.$inject = ['$scope', '$rootScope', '$cookies', '$state', '$http'];
